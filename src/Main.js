@@ -1,4 +1,5 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
+import AddMedicine from "./AdminComponents/AddMedicine";
 import MedicineList from "./AdminComponents/MedicineList";
 import About from "./AllUserComponents/About";
 import Home from "./AllUserComponents/Home";
@@ -9,6 +10,7 @@ const Main=()=>{
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/admin/medicines" element={<MedicineList/>}/>
+            <Route path="/admin/add/medicine" element={<AddMedicine/>}/>
         </Routes>
         </BrowserRouter>
     )

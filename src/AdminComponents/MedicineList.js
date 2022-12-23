@@ -7,10 +7,10 @@ const MedicineList=()=>{
     const [errs,setErrs] = useState({});
 
     useEffect(()=>{
-        axios.get("https://localhost:44361/api/medicines").then((rsp)=>{
+        axiosConfig.get("/medicines").then((rsp)=>{
             setMedicines(rsp.data); 
             debugger
-        },(err)=>{})
+        },(err)=>{debugger})
     },[]);
 
     return(
@@ -41,13 +41,13 @@ const MedicineList=()=>{
             medicines.map((medicine)=>
             <tr key={ medicine.Id } className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
               {/* <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td> */}
-              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              <td className="tr">
                 { medicine.Id }
               </td>
-              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              <td className="tr">
               { medicine.Chemical_Name }
               </td>
-              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              <td className="tr">
               { medicine.Description }
               </td>
             </tr>
