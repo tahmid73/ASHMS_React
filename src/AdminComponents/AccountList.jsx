@@ -2,25 +2,25 @@ import { useEffect, useState } from "react";
 import axiosConfig from "../AllUserComponents/axiosConfig"
 import axios from "axios";
 import AdminNavbar from "./AdminNavbar";
-const MedicineList=()=>{
-    const [medicines, setMedicines]=useState([]);
+const AccountList=()=>{
+    const [accounts, setAccounts]=useState([]);
     const [identity, setId] = useState(0);
     const [errs,setErrs] = useState({});
 
     useEffect(()=>{
-        axiosConfig.get("medicines").then((rsp)=>{
-            setMedicines(rsp.data); 
+        axiosConfig.get("accounts").then((rsp)=>{
+            setAccounts(rsp.data); 
             debugger
         },(errs)=>{debugger})
     },[]);
 
     const Remove = (event) => {
       event.preventDefault();
-      axiosConfig.get(`medicines/delete/${identity}`).then((rsp) => {
-        window.location.href="/admin/medicines";
+      axiosConfig.get(`accounts/delete/${identity}`).then((rsp) => {
+        window.location.href="/admin/accounts";
           debugger;
       }, (errs) => {
-        window.location.href="/admin/medicines";
+        window.location.href="/admin/accounts";
           debugger;
       })
     }
@@ -41,10 +41,13 @@ const MedicineList=()=>{
                 Id
               </th>
               <th scope="col" className="px-6 py-4 text-left">
-                Chemical Name
+                Revenue
               </th>
               <th scope="col" className="px-6 py-4 text-left">
-                Description
+                Transaction Type
+              </th>
+              <th scope="col" className="px-6 py-4 text-left">
+                Date
               </th>
               <th scope="col" className="px-6 py-4 text-left">
                 Delete
@@ -53,21 +56,24 @@ const MedicineList=()=>{
           </thead>
           <tbody>
             {
-            medicines.map((medicine)=>
-            <tr key={ medicine.Id } className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+            accounts.map((account)=>
+            <tr key={ account.Id } className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
               {/* <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td> */}
               <td className="tr">
-                { medicine.Id }
+                { account.Id }
               </td>
               <td className="tr">
-              { medicine.Chemical_Name }
+              { account.Revenue }
               </td>
               <td className="tr">
-              { medicine.Description }
+              { account.Transaction_type }
+              </td>
+              <td className="tr">
+              { account.Date }
               </td>
               <td className="tr">
               <form onSubmit={Remove}>
-                <input className="whiteButton" type="submit" onClick={()=>{setId(medicine.Id)}} value="Delete"/>
+                <input type="submit" onClick={()=>{setId(account.Id)}} name="Delete"/>
               </form>
               </td>
             </tr>
@@ -81,4 +87,4 @@ const MedicineList=()=>{
     )
 }
 
-export default MedicineList;    
+export default AccountList;    

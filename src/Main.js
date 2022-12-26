@@ -1,8 +1,13 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
+import AccountList from "./AdminComponents/AccountList";
 import AddMedicine from "./AdminComponents/AddMedicine";
+import AddTransaction from "./AdminComponents/AddTransaction";
 import MedicineList from "./AdminComponents/MedicineList";
+import MonthlyChart from "./AdminComponents/MonthlyChart";
+import TransactionList from "./AdminComponents/TransactionList";
 import About from "./AllUserComponents/About";
 import Home from "./AllUserComponents/Home";
+import Login from "./AllUserComponents/Login";
 const Main=()=>{
     return(
         <BrowserRouter>
@@ -11,6 +16,11 @@ const Main=()=>{
             <Route path="/about" element={<About/>}/>
             <Route path="/admin/medicines" element={<MedicineList/>}/>
             <Route path="/admin/add/medicine" element={<AddMedicine/>}/>
+            <Route path="/admin/accounts" element={<AccountList/>}/>
+            <Route path="/admin/Add/transaction" element={<AddTransaction/>}/>
+            <Route path="/login" element={<Login/>} />
+            <Route path="/admin/transactions" element={<TransactionList/>} />
+            <Route path="/admin/account/chart" element={<MonthlyChart/>}/>
         </Routes>
         </BrowserRouter>
     )
