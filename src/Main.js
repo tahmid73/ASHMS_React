@@ -9,7 +9,7 @@ import Home from "./AllUserComponents/Home";
 import Login from "./AllUserComponents/Login";
 const Main=()=>{
     return(
-        <BrowserRouter>
+        <BrowserRouter basename="/ASHMS_React">
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
