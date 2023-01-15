@@ -17,10 +17,10 @@ const AccountList=()=>{
     const Remove = (event) => {
       event.preventDefault();
       axiosConfig.get(`accounts/delete/${identity}`).then((rsp) => {
-        window.location.href="/admin/accounts";
+        window.location.href="/ASHMS_React/admin/accounts";
           debugger;
       }, (errs) => {
-        window.location.href="/admin/accounts";
+        window.location.href="/ASHMS_React/admin/accounts";
           debugger;
       })
     }

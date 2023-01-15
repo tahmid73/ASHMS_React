@@ -22,10 +22,10 @@ const AddTransaction=()=>{
     const Remove = (event) => {
       event.preventDefault();
       axiosConfig.get(`appoinments/delete/${identity}`).then((rsp) => {
-        window.location.href="/admin/add/transaction";
+        window.location.href="/ASHMS_React/admin/add/transaction";
           debugger;
       }, (errs) => {
-        window.location.href="/admin/transactions";
+        window.location.href="/ASHMS_React/admin/transactions";
           debugger;
       })
     }
@@ -40,7 +40,7 @@ const AddTransaction=()=>{
         then((succ)=>{
             setSucc(succ.data);
             debugger;
-            window.location.href="/admin/transactions";
+            window.location.href="/ASHMS_React/admin/transactions";
         },(err)=>{
             setErrs(err.response.data);
             console.log(data);

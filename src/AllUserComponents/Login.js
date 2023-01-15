@@ -63,7 +63,7 @@ const Login = () => {
                     {errs}
                 </span>
                 <br /><br />
-                <a className="whiteButton" href="/forgotpassword">FORGOT PASSWORD ?</a>
+                {/* <a className="whiteButton" href="/forgotpassword">FORGOT PASSWORD ?</a> */}
             </center>
         </div>
     )

@@ -4,7 +4,7 @@ const Logout = () => {
         axiosConfig.get("logout").then
             ((rsp) => {
                 debugger;
-                window.location.href = "/login";
+                window.location.href = "/ASHMS_React/login";
             }, (error) => {
                 debugger
             })

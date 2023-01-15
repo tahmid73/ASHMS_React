@@ -9,7 +9,7 @@ const Home=()=>{
                 <h1 className="max-w-2xl mb-4 text-4xl font-extrabold  text-gray-800 leading-none tracking-tight md:text-5xl xl:text-6xl ">Online <br/>Hospital</h1>
                 <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl ">Get your necessary medicine and test<a href="https://tailwindcss.com" className="hover:underline">tests</a> prescription from doctor <a href="https://flowbite.com/docs/getting-started/introduction/" className="hover:underline">and</a> bla <a href="https://flowbite.com/blocks/" className="hover:underline">bla</a>.</p>
                 <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                    <a href="/login" className="whiteButton">
+                    <a href="/ASHMS_React/login" className="whiteButton">
                         Get started
                     </a> 
                 </div>

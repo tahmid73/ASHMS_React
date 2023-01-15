@@ -16,7 +16,7 @@ const AddMedicine=()=>{
         then((succ)=>{
             setSucc(succ.data);
             debugger;
-            window.location.href="/admin/medicines";
+            window.location.href="/ASHMS_React/admin/medicines";
         },(err)=>{
             setErrs(err.response.data);
             console.log(data);

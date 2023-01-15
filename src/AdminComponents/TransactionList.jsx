@@ -17,10 +17,10 @@ const TransactionList=()=>{
     const Remove = (event) => {
       event.preventDefault();
       axiosConfig.get(`transactions/delete/${identity}`).then((rsp) => {
-        window.location.href="/admin/transactions";
+        window.location.href="/ASHMS_React/admin/transactions";
           debugger;
       }, (errs) => {
-        window.location.href="/admin/transactions";
+        window.location.href="/ASHMS_React/admin/transactions";
           debugger;
       })
     }

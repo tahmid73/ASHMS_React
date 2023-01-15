@@ -17,10 +17,10 @@ const MedicineList=()=>{
     const Remove = (event) => {
       event.preventDefault();
       axiosConfig.get(`medicines/delete/${identity}`).then((rsp) => {
-        window.location.href="/admin/medicines";
+        window.location.href="/ASHMS_React/admin/medicines";
           debugger;
       }, (errs) => {
-        window.location.href="/admin/medicines";
+        window.location.href="/ASHMS_React/admin/medicines";
           debugger;
       })
     }
