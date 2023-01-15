@@ -3,7 +3,6 @@ import AccountList from "./AdminComponents/AccountList";
 import AddMedicine from "./AdminComponents/AddMedicine";
 import AddTransaction from "./AdminComponents/AddTransaction";
 import MedicineList from "./AdminComponents/MedicineList";
-import MonthlyChart from "./AdminComponents/MonthlyChart";
 import TransactionList from "./AdminComponents/TransactionList";
 import About from "./AllUserComponents/About";
 import Home from "./AllUserComponents/Home";
@@ -20,7 +19,6 @@ const Main=()=>{
             <Route path="/admin/Add/transaction" element={<AddTransaction/>}/>
             <Route path="/login" element={<Login/>} />
             <Route path="/admin/transactions" element={<TransactionList/>} />
-            <Route path="/admin/account/chart" element={<MonthlyChart/>}/>
         </Routes>
         </BrowserRouter>
     )
